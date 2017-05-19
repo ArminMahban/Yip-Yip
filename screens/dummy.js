@@ -6,12 +6,20 @@ import {
   View,
   Button
 } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 
 class DummyComponent extends Component {
 
   static navigationOptions = ({ navigation }) => ({
-    headerRight: <Button title="Menu" onPress={()=>{ navigation.navigate('Settings'); }} />,
+    headerRight: <Icon type='ionicon'
+      name='ios-glasses-outline'
+      size={30}
+      onPress={()=>{ navigation.navigate('Settings'); }}
+      style={{ marginRight: 10, padding: 5}}
+      underlayColor='yellow'
+    />
+    // headerRight: <Button title="Menu" onPress={()=>{ navigation.navigate('Settings'); }} />,
   });
 
   constructor(props) {
