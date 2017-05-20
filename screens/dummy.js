@@ -7,21 +7,11 @@ import {
   Button
 } from 'react-native';
 import { Icon } from 'react-native-elements';
-
+import ActionButton from 'react-native-action-button';
 
 class DummyComponent extends Component {
 
 
-  constructor(props) {
-    super(props);
-
-    this.showModal = this.showModal.bind(this);
-  }
-
-  showModal() {
-    console.log("here");
-    this.props.navigation.navigate('Settings');
-  }
 
   render() {
     console.log("in dummy render");
@@ -31,6 +21,11 @@ class DummyComponent extends Component {
         <Text style={styles.welcome}>
           Welcome to DummyComponent!
         </Text>
+        <ActionButton
+          buttonColor='#FF906F'
+          onPress={() => { this.props.navigation.navigate('NewPost')}}          hideShadow={false}
+          size={50}
+        />
       </View>
     );
   }

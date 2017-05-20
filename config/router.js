@@ -85,6 +85,15 @@ export const SettingsStack = StackNavigator({
   }
 })
 
+export const NewPostStack = StackNavigator({
+  NewPost: {
+    screen: Settings,
+    navigationOptions: {
+      title: 'New Post',
+    }
+  }
+})
+
 export const FeedStack = StackNavigator({
   Dummy: {
     screen: DummyComponent,
@@ -159,6 +168,9 @@ export const Root = StackNavigator({
   Settings: {
     screen: SettingsStack,
   },
+  NewPost: {
+    screen: NewPostStack,
+  }
 }, {
   mode: 'modal',
   headerMode: 'none',
