@@ -11,16 +11,6 @@ import { Icon } from 'react-native-elements';
 
 class DummyComponent extends Component {
 
-  static navigationOptions = ({ navigation }) => ({
-    headerRight: <Icon type='ionicon'
-      name='ios-glasses-outline'
-      size={30}
-      onPress={()=>{ navigation.navigate('Settings'); }}
-      style={{ marginRight: 10, padding: 5}}
-      underlayColor='yellow'
-    />
-    // headerRight: <Button title="Menu" onPress={()=>{ navigation.navigate('Settings'); }} />,
-  });
 
   constructor(props) {
     super(props);
@@ -37,16 +27,9 @@ class DummyComponent extends Component {
     console.log("in dummy render");
     return (
       <View style={styles.container}>
-        <Button title="Push View" onPress={() => this.props.navigation.navigate('Feed')} />
+        <Button title="Push View" color='white' onPress={() => this.props.navigation.navigate('Feed')} />
         <Text style={styles.welcome}>
           Welcome to DummyComponent!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
         </Text>
       </View>
     );
@@ -58,12 +41,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#333343',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: 'white'
   },
   instructions: {
     textAlign: 'center',
