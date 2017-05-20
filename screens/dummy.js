@@ -4,19 +4,21 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  Button,
+  StatusBar
 } from 'react-native';
 import { Icon } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
 
 class DummyComponent extends Component {
 
-
-
   render() {
     console.log("in dummy render");
     return (
       <View style={styles.container}>
+        <StatusBar
+        barStyle="light-content"
+        />
         <Button title="Push View" color='white' onPress={() => this.props.navigation.navigate('Feed')} />
         <Text style={styles.welcome}>
           Welcome to DummyComponent!

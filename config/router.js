@@ -13,6 +13,7 @@ import {
 import Feed from '../screens/Feed';
 import DummyComponent from '../screens/dummy';
 import Settings from '../screens/settings';
+import Tutorial from '../screens/tutorial';
 
 const navBarMainColor='#474BB3';
 const navBarTintColor='#FFFFFF';
@@ -109,6 +110,7 @@ export const FeedStack = StackNavigator({
   },
 }, {
   navigationOptions: ({ navigation }) => ({
+    gesturesEnabled: false,
     headerTintColor: 'white',
     headerStyle: {
       backgroundColor: mainColor,
@@ -162,6 +164,9 @@ export const Tabs = TabNavigator({
 });
 
 export const Root = StackNavigator({
+  Tutorial: {
+    screen: Tutorial,
+  },
   Tabs: {
     screen: Tabs,
   },
